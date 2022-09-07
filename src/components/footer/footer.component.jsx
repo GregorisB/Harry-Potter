@@ -1,14 +1,14 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import { Outlet, useParams } from "react-router-dom";
 
 const Footer = () => {
-  return (
-    <div>
-       Footer
-       <Outlet/>
-       </div>
+   let { house } = useParams();
+   return (
+      <div>
+         {house}
+         <Outlet />
+      </div>
+   );
+};
 
-  )
-}
-
-export default Footer
+export default Footer;
