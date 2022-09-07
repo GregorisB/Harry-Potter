@@ -1,23 +1,20 @@
-import './App.css';
+import { Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Header from "./components/header/header.component";
+import Houses from "./components/houses/houses.component";
+import Footer from "./components/footer/footer.component";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      <Routes>
+         <Route path="/" element={<Header />}>
+            <Route index element={<Houses />}></Route>
+         </Route>
+         <Route path="/1" element={<Footer />}>NJK</Route>
+      </Routes>
+   );
 }
 
 export default App;
