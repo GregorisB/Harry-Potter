@@ -6,7 +6,7 @@ const Houses = () => {
       <Container>
          <Row className="w-100 m-auto">
             <HouseCard
-               name="house1"
+               name="378" //Targaryen
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
