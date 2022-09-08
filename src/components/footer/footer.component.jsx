@@ -5,8 +5,7 @@ const Footer = () => {
    let { house } = useParams();
    return (
       <div>
-         {house}
-         <Outlet />
+         footer
       </div>
    );
 };
