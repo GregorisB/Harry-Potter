@@ -6,27 +6,27 @@ const Houses = () => {
       <Container>
          <Row className="w-100 m-auto">
             <HouseCard
-               name="378" //Targaryen
+               name="Targaryen" 
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
-               name="house2"
+               name="Stark"
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
-               name="house3"
+               name="Baratheon"
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
-               name="house4"
+               name="Lannister"
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
-               name="house5"
+               name="Greyjoy"
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
-               name="house6"
+               name="Tyrell"
                img="https://dummyimage.com/600x400/000/fff"
             />
             <HouseCard
