@@ -14,7 +14,8 @@ function App() {
 			<Route path="/" element={<Header />}>
 				<Route index element={<Houses />} />
 				<Route path=":houseName" element={<House />}>
-					<Route path=":name" element={<Member />} />
+
+				<Route path=":name" element={<Member />} />
 				</Route>
 			</Route>
 		</Routes>
