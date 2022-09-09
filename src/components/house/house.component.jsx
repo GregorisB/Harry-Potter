@@ -4,10 +4,12 @@ import { Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
 
 import Members from '../members-list/members-list.component';
+import Member from '../member/member.component';
 
 const House = () => {
 	const [house, setHouse] = useState([]);
 	const { houseName } = useParams();
+	const { name } = useParams();
 
 	useEffect(() => {
 		fetch(`http://hp-api.herokuapp.com/api/characters/house/${houseName}`)
@@ -17,15 +19,21 @@ const House = () => {
 
 	return (
 		<Container>
-			{<Outlet />
-				? <Outlet />
-				:
 			<Row className="w-75 m-auto">
+				{/* {useParams().name
+					? <Member />
+					: house.map((member, index) => {
+						return <Members member={member} key={index} />;
+					})
+				} */}
 				{house.map((member, index) => {
-					return <Members member={member} key={index} />;
+					return name ?
+						<Member />
+					:
+						<Members member={member} key={index} />
+					;
 				})}
-			</Row>}
-			
+			</Row>
 		</Container>
 	);
 };

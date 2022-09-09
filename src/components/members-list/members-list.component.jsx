@@ -1,14 +1,15 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { Outlet } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom';
 
 const Members = ({ member }) => {
-	return (
+	return useParams().name ? (
+		'yes'
+	) : (
 		<Col
 			xs={member.image !== '' ? 4 : 3}
 			className="my-3"
-			style={{cursor: 'pointer'}}
+			style={{ cursor: 'pointer' }}
 		>
 			<Link className="text-decoration-none" to={member.name}>
 				<Card>
@@ -18,7 +19,6 @@ const Members = ({ member }) => {
 					</Card.Header>
 				</Card>
 			</Link>
-
 		</Col>
 	);
 };
