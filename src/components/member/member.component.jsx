@@ -19,13 +19,13 @@ const Member = () => {
 				data.map((s) => {
 					switch (s.name) {
 						case name:
-							setFullname(s.name);
-							setGender(s.gender);
-							setAncestry(s.ancestry);
+							setFullname(s.name.toUpperCase());
+							setGender(s.gender.toUpperCase());
+							setAncestry(s.ancestry.toUpperCase());
 							setImage(s.image);
-							setWand(s.wand.core);
-							setHairColor(s.hairColour);
-							setEyeColor(s.eyeColour);
+							setWand(s.wand.core.toUpperCase());
+							setHairColor(s.hairColour.toUpperCase());
+							setEyeColor(s.eyeColour.toUpperCase());
 							break;
 						default:
 							break;
@@ -46,7 +46,7 @@ const Member = () => {
 					</Card.Header>
 					<Card.Body>
 						<Card.Title>
-							{fullname ? `Name:${fullname}` : void 0}
+							{fullname ? `Name: ${fullname}` : void 0}
 						</Card.Title>
 						<Card.Title>
 							{gender ? `Gender: ${gender}` : void 0}
