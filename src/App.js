@@ -13,10 +13,8 @@ function App() {
 		<Routes>
 			<Route path="/" element={<Header />}>
 				<Route index element={<Houses />} />
-				<Route path=":houseName" element={<House />}>
-
-				<Route path=":name" element={<Member />} />
-				</Route>
+				<Route path=":houseName" element={<House />} />
+				<Route path=":houseName/:name" element={<Member />} />
 			</Route>
 		</Routes>
 	);
